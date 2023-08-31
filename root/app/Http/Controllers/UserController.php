@@ -20,14 +20,9 @@ class UserController extends Controller
     }
 
 
-    public function index()
+    public function user()
     {
-        // 一覧画面
-        //   id 降順でレコードセットを取得(Illuminate\Pagination\LengthAwarePaginator)
-        $user = User::orderByDesc('id')->paginate(20);
-        return view('user', [
-            'user' => $user,
-        ]);
+        return view('user');
     }
 
     /**
