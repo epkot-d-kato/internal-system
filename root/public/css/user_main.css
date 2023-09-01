@@ -1,0 +1,42 @@
+.main {
+    display: inline-block;
+}
+
+.register_button {
+    text-align: right;
+}
+
+
+.main table th {
+    width:6.2%;
+}
+
+.table_controller  {
+    display:inline-block;
+}
+
+.pagination {
+    display:inline-block;
+    width:27.7%;
+}
+
+.pagination ul {
+    display:inline;
+    padding-left:0%;
+    list-style:none;
+}
+
+.pagination li{
+    display: inline;
+    border: solid lightgray 1px;
+    padding:1% 2%
+}
+
+.return_button {
+    display: inline-block;
+}
+
+.main_controller {
+    text-align: right;
+    margin:1%;
+}
