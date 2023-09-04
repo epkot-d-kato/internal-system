@@ -1,5 +1,6 @@
 .main {
     display: inline-block;
+    width:83%;
 }
 
 .register_button {
@@ -11,8 +12,8 @@
     border:solid;
 }
 
-.main table th {
-    width:6.2%;
+.main table {
+    width:100%;
 }
 
 .table_controller  {

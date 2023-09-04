@@ -1,20 +1,21 @@
 .header_menu {
-    display:inline-block;
     width:100%;
     background: skyblue;
     color:white;
-    font-size:1.5em;
+    border:solid;
+    line-height:0.4em;
 }
 
 .header_menu .title  {
     display:inline-block;
     width:63%;
     margin-left:1%;
-
+    font-size:1.5em;
 }
 
 .header_menu .menu  {
     display:inline-block;
+    font-size:1.5em;
 }
 
 .header_menu .menu ul {
@@ -39,13 +40,12 @@
     margin:0%;
     font-size:1.1em;
     padding:5%;
-
 }
-
 
 .side_menu .blank p {
     padding:78% 0;
 }
+
 .side_menu p a {
     text-decoration:none;
     color:black;

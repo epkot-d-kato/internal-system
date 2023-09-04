@@ -18,16 +18,9 @@ class UserController extends Controller
         return view('home');
     }
 
-    public function user() {
-        $lastNames = User::select('last_name')->get();
-        $firstNames = User::select('first_name')->get();
-        $joinDates = User::select('join_date')->get();
-
-        return view('user', [
-            'lastNames' => $lastNames,
-            'firstNames' => $firstNames,
-            'joinDates' => $joinDates,
-        ]);
+    public function user($perPage = 15) {
+        $users = User::paginate($perPage);
+        return view('user', compact('users','perPage'));
     }
 
     /**
