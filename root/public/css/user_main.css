@@ -6,6 +6,10 @@
     text-align: right;
 }
 
+.last_name, .first_name, .join_date {
+    display: inline-block;
+    border:solid;
+}
 
 .main table th {
     width:6.2%;

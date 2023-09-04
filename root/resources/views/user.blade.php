@@ -44,109 +44,32 @@
 
     <section class="main">
 
-        <div class = "register_button">
+        <div class="register_button">
             <button>戻る</button>
             <button>新規登録</button>
         </div>
 
+        <div class="table">
+            <div class = "last_name">
+                @foreach($lastNames as $lastName)
+                <p>{{$lastName->last_name}}</p>
+                @endforeach
+            </div>
+            <div class = "first_name">
+                @foreach($firstNames as $firstName)
+                <p>{{$firstName->first_name}}</p>
+                @endforeach
+            </div>
 
-        <table border="1">
-            <tr>
-                <th>社員名</th>
-                <th>入社日</th>
-                <th>詳細</th>
-                <th>編集</th>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
-            <tr>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-                <td>ダミー</td>
-            </tr>
+            <div class = "join_date">
+                @foreach($joinDates as $joinDate)
+                <p>{{$joinDate->join_date}}</p>
+                @endforeach
+            </div>
 
+        </div>
 
-        </table>
-
-
-        <div class = "main_controller">
+        <div class="main_controller">
             <div class="table_controller">
                 <form action="">
                     <select name="user" id="">
@@ -159,14 +82,14 @@
 
             <div class="pagination">
                 <ul>
-                    <li><</li>
+                    <li><<</li>
                     <li>1</li>
                     <li>2</li>
                     <li>3</li>
                     <li>4</li>
                     <li>...</li>
                     <li>13</li>
-                    <li>></li>
+                    <li>>></li>
                 </ul>
             </div>
 

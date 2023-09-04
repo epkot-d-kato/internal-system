@@ -14,15 +14,20 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function home()
-    {
+    public function home(){
         return view('home');
     }
 
+    public function user() {
+        $lastNames = User::select('last_name')->get();
+        $firstNames = User::select('first_name')->get();
+        $joinDates = User::select('join_date')->get();
 
-    public function user()
-    {
-        return view('user');
+        return view('user', [
+            'lastNames' => $lastNames,
+            'firstNames' => $firstNames,
+            'joinDates' => $joinDates,
+        ]);
     }
 
     /**
