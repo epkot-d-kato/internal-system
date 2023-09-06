@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use PhpParser\Node\NullableType;
 
 class StoreUserRequest extends FormRequest
 {
@@ -13,7 +14,7 @@ class StoreUserRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +25,12 @@ class StoreUserRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'last_name' => 'required',
+            'last_name_kana' => 'required',
+            'first_name' => 'required',
+            'first_name_kana' => 'required',
+            'email' => 'required',
+
         ];
     }
 }

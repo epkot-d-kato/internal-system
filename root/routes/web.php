@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home',[UserController::class,'home']);
-Route::get('/users', [UserController::class,'user']);
+Route::get('/users/index', [UserController::class,'index']);
+Route::get('/users/create', [UserController::class,'create']);
+Route::post('/users/store', [UserController::class,'store']);

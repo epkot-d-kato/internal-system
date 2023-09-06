@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/side_header.css">
-    <link rel="stylesheet" href="css/user_main.css">
+    <link rel="stylesheet" href="{{asset('css/side_header.css')}}">
+    <link rel="stylesheet" href="{{asset('css/user_main.css')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="js/user.js"></script>
 
@@ -48,7 +48,7 @@
 
         <div class="register_button">
             <button>戻る</button>
-            <button>新規登録</button>
+            <button onclick="location.href='/users/create'">新規登録</button>
         </div>
 
         <div class="table">
@@ -79,7 +79,7 @@
 
         <div class="main_controller">
             <div class="table_controller">
-                <form action="/users" method="GET">
+                <form action="/users/index" method="GET">
                     <select name="perPage" id = "perPage" onchange = "this.form.submit()" >
                         <option value="15" @if($perPage == 15) selected @endif>15</option>
                         <option value="50" @if($perPage == 50) selected @endif>50</option>

@@ -18,10 +18,11 @@ class UserController extends Controller
         return view('home');
     }
 
-    public function user($perPage = 15) {
+    public function index($perPage = 15) {
         $users = User::paginate($perPage);
         return view('user', compact('users','perPage'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -29,8 +30,8 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {    return view('create');
+
     }
 
     /**
@@ -39,9 +40,11 @@ class UserController extends Controller
      * @param  \App\Http\Requests\StoreUserRequest  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(StoreUserRequest $request)
     {
-        //
+        User::create($request->validated());
+        return redirect('users/index');
     }
 
     /**
