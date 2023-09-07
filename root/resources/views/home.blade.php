@@ -47,8 +47,8 @@
         </ul>
         <p>社員管理</p>
         <ul>
-            <li><a href="">社員一覧</a></li>
-            <li><a href="">社員登録</a></li>
+            <li><a href="users/index">社員一覧</a></li>
+            <li><a href="users/create">社員登録</a></li>
         </ul>
         <p>休日設定</p>
         <ul>

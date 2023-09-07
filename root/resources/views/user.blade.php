@@ -67,8 +67,8 @@
                     <tr>
                         <td>{{$user->last_name}}{{$user->first_name}}</td>
                         <td>{{$user->join_date}}</td>
-                        <td><button>詳細</button></td>
-                        <td><button>編集</button></td>
+                        <th><button onclick="location.href='/users/show'">詳細</button></th>
+                        <th><button onclick="location.href='/users/edit'">編集</button></th>
                     </tr>
                     @endforeach
                 </tbody>

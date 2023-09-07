@@ -30,8 +30,8 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {    return view('create');
-
+    {
+        return view('create');
     }
 
     /**
@@ -55,7 +55,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return view('show');
     }
 
     /**
@@ -66,14 +66,14 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \App\Http\Requests\UpdateUserRequest  $request
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\User
      * @return \Illuminate\Http\Response
      */
     public function update(UpdateUserRequest $request, User $user)

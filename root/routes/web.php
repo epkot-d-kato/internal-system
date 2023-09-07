@@ -21,3 +21,6 @@ Route::get('/home',[UserController::class,'home']);
 Route::get('/users/index', [UserController::class,'index']);
 Route::get('/users/create', [UserController::class,'create']);
 Route::post('/users/store', [UserController::class,'store']);
+Route::get('/users/show', [UserController::class,'show']);
+Route::get('/users/edit', [UserController::class,'edit']);
+Route::put('/users/update', [UserController::class,'update']);
