@@ -53,9 +53,13 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
-    {
-        return view('show');
+    public function show($id)
+{
+        $user = User::find($id);
+        if(!$user){
+            abort(404);
+        }
+        return view('show',compact('user'));
     }
 
     /**
@@ -64,9 +68,13 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit($id)
     {
-
+        $user = User::find($id);
+        if(!$user){
+            abort(404);
+        }
+        return view('edit', compact('user'));
     }
 
     /**
@@ -76,9 +84,12 @@ class UserController extends Controller
      * @param  \App\Models\User
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserRequest $request, User $user)
+    public function update(UpdateUserRequest $request, $id)
     {
-        //
+        $data = $request->only(['last_name','last_name_kana','first_name','first_name_kana','prefecture','email']);
+        $user = User::find($id);
+        $user->update($data);
+        return redirect('users/index');
     }
 
     /**
@@ -87,8 +98,8 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy()
     {
-        //
+
     }
 }

@@ -31,7 +31,7 @@
         <div class="content">
             <p><a href="/home">トップページ</a></p>
             <p><a href="">申請管理</a></p>
-            <p><a href="">社員管理</a></p>
+            <p><a href="/users/index">社員管理</a></p>
             <p><a href="">休日設定</a></p>
             <p><a href="">勤怠管理</a></p>
             <p><a href="">交通費整理</a></p>
@@ -55,6 +55,7 @@
             <table border="1">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>社員名</th>
                         <th>入社日</th>
                         <th>詳細</th>
@@ -65,10 +66,11 @@
                 <tbody>
                     @foreach($users as $user)
                     <tr>
+                        <td>{{$user->id}}</td>
                         <td>{{$user->last_name}}{{$user->first_name}}</td>
                         <td>{{$user->join_date}}</td>
-                        <th><button onclick="location.href='/users/show'">詳細</button></th>
-                        <th><button onclick="location.href='/users/edit'">編集</button></th>
+                        <th><button onclick="location.href='/users/show/{{$user->id}}'">詳細</button></th>
+                        <th><button onclick="location.href='/users/edit/{{$user->id}}'">編集</button></th>
                     </tr>
                     @endforeach
                 </tbody>

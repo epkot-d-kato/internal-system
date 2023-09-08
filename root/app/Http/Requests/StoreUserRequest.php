@@ -30,6 +30,7 @@ class StoreUserRequest extends FormRequest
             'first_name' => 'required',
             'first_name_kana' => 'required',
             'email' => 'required',
+            'prefecture' => 'required',
 
         ];
     }
