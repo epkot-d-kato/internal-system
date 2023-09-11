@@ -1,3 +1,7 @@
+window.$ = window.JQuery = require('jquery');
+
+require('./bootstrap');
+
 import 'bootstrap';
 
 /**
