@@ -31,3 +31,25 @@ Route::get('/works/create',[WorkController::class,'create']);
 Route::post('/works/store',[WorkController::class,'store']);
 Route::delete('/works/destroy/{id}',[WorkController::class,'destroy']);
 
+
+Route::prefix('/member')->group(function () {
+
+    return view('member_home');
+
+    Route::prefix('/report')->group(function(){
+
+    });
+
+    Route::prefix('/work')->group(function() {
+
+    });
+
+    Route::prefix('/transportation')->group(function(){
+
+    });
+
+    Route::prefix('/equipments')->group(function(){
+
+    });
+
+});
