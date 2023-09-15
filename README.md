@@ -1,7 +1,6 @@
 # Laravel9環境
 
 Laravel9 のGitHubテンプレートリポジトリです。
-
 ## インストール
 
 - Git (GitHub)

@@ -15,12 +15,12 @@ class UserController extends Controller
      */
 
     public function home(){
-        return view('home');
+        return view('/admin/home');
     }
 
     public function index($perPage = 15) {
         $users = User::paginate($perPage);
-        return view('user', compact('users','perPage'));
+        return view('/admin/users/index', compact('users','perPage'));
     }
 
 

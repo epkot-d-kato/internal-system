@@ -20,6 +20,7 @@ services:
       - "TZ=Asia/Tokyo"
     working_dir: /var/www/root
     restart: always
+    
   db:
     platform: linux/x86_64 # M1チップ対応
     container_name: "${NAME_PREFIX}-mysql"
@@ -35,6 +36,7 @@ services:
       - "MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}"
       - "TZ=Asia/Tokyo"
     restart: always
+
   phpmyadmin:
     container_name: "${NAME_PREFIX}-phpmyadmin"
     hostname: "${NAME_PREFIX}-phpmyadmin"
