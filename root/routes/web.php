@@ -32,9 +32,11 @@ Route::post('/works/store',[WorkController::class,'store']);
 Route::delete('/works/destroy/{id}',[WorkController::class,'destroy']);
 
 
-Route::prefix('/member')->group(function () {
+Route::get('/member', function () {
+    return view('member.home');
+});
 
-    return view('member_home');
+Route::prefix('/member')->group(function () {
 
     Route::prefix('/report')->group(function(){
 
