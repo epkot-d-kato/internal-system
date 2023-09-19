@@ -15,7 +15,8 @@ class ReportController extends Controller
      */
     public function index()
     {
-        //
+        $reports = Report::all();
+        return view('/member/report/index', compact('reports'));
     }
 
     /**
@@ -25,7 +26,7 @@ class ReportController extends Controller
      */
     public function create()
     {
-        //
+        return view('/member/report/create');
     }
 
     /**
@@ -36,7 +37,6 @@ class ReportController extends Controller
      */
     public function store(StoreReportRequest $request)
     {
-        //
     }
 
     /**
@@ -70,7 +70,29 @@ class ReportController extends Controller
      */
     public function update(UpdateReportRequest $request, Report $report)
     {
-        //
+
+        $validateData = $request->validate([
+            'month' => 'required',
+            'day' => 'required',
+            'check_in_time' => 'required',
+            'check_out_time' => 'required',
+        ]);
+
+        $month = $validateData['month'];
+        $date = $validateData['day'];
+        $check_in_time = $validateData['check_in_time'];
+        $check_out_time = $validateData['check_out_time'];
+
+        $record = Report::where('month', $month)
+            ->where('day', $date)
+            ->first();
+
+        $record->update([
+            'check_in_time' => $check_in_time,
+            'check_out_time' => $check_out_time,
+        ]);
+        
+        return redirect('/member/report/index');
     }
 
     /**

@@ -32,7 +32,7 @@ class GenerateReports extends Command
         $endDate = date('Y-m-t', strtotime($month));
 
         while ($month <= $endDate) {
-            $dayOfWeek = date('1', strtotime($month));
+            $dayOfWeek = date('l', strtotime($month));
 
             Report::create([
                 'month' => date('m', strtotime($month)),

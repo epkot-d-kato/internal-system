@@ -41,8 +41,8 @@
     <section class = main>
         <p>勤怠管理</p>
         <ul>
-            <li><a href="">勤怠一覧</a></li>
-            <li><a href="">勤怠登録</a></li>
+            <li><a href="member/report/index">勤怠一覧</a></li>
+            <li><a href="member/report/create">勤怠登録</a></li>
         </ul>
         <p>各種設定</p>
         <ul>

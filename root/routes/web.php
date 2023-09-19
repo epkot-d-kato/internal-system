@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +40,9 @@ Route::get('/member', function () {
 Route::prefix('/member')->group(function () {
 
     Route::prefix('/report')->group(function(){
+        Route::get('/index',[ReportController::class,'index']);
+        Route::get('/create',[ReportController::class,'create']);
+        Route::put('/update',[ReportController::class,'update']);
 
     });
 
